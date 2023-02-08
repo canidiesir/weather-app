@@ -2,7 +2,13 @@ import { useState } from "react";
 import { ICoords } from "../types/appTypes"
 
 export const useLocation = () => {
-    const [location, setLocation] = useState<ICoords>();
+    const [location, setLocationDefault] = useState<ICoords>();
+
+    const setLocation = (newLocation: ICoords) => {
+        if(location == undefined || JSON.stringify(location) != JSON.stringify(newLocation)) {
+            setLocationDefault(newLocation);
+        }
+    }
 
     const setCurrentLocation = () => {
         navigator.geolocation.getCurrentPosition(function(position) {
@@ -13,7 +19,7 @@ export const useLocation = () => {
     
             setLocation(coords);
         }, function() {
-            alert("location not allowed")
+            alert("Allow location access for this feature")
         });
     }
 
