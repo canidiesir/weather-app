@@ -9,6 +9,7 @@ const WeatherInfo : FC<ICoords> = (props) => {
             const result = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${props.lat}&lon=${props.lng}&appid=0474a9d3d9bb6baafc7ed5f79aa245f5&units=metric`);
             const data = await result.json();
             setInfo(data);
+            console.log(data)
         }
 
         fetchData();
@@ -22,7 +23,7 @@ const WeatherInfo : FC<ICoords> = (props) => {
                 <p>Temperature: {info.main.temp}°C</p>
                 <p>Feels like: {info.main.feels_like}°C</p>
                 <p>Humidity: {info.main.humidity}</p>
-                <p>Sea Level: {info.main.sea_level}</p>
+                <p>Pressure: {info.main.pressure}</p>
                 <p>Wind Speed: {info.wind.speed}</p>
                 <p>Visibility: {info.visibility}</p>
             </div>}

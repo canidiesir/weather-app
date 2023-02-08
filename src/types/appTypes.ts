@@ -15,7 +15,7 @@ export interface IWeather {
         temp: number,
         feels_like: number,
         humidity: number,
-        sea_level: number
+        pressure: number
     },
 
     wind : {
