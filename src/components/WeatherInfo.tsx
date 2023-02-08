@@ -6,10 +6,9 @@ const WeatherInfo : FC<ICoords> = (props) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${props.lat}&lon=${props.lng}&appid=0474a9d3d9bb6baafc7ed5f79aa245f5&units=metric`);
+            const result = await fetch(`${import.meta.env.VITE_WEATHER_API_BASE_URL}/weather?units=metric&lat=${props.lat}&lon=${props.lng}&appid=${import.meta.env.VITE_WEATHER_API_KEY}`);
             const data = await result.json();
             setInfo(data);
-            console.log(data)
         }
 
         fetchData();
