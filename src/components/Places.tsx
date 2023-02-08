@@ -13,7 +13,6 @@ interface placesProps {
 
 const Places:FC<placesProps> = (props) => {
     const [address, setAddress] = useState("");
-    const [myLocation, setMyLocation] = useState(true);
 
     const handleChange = (address: string) => {
         setAddress(address);
@@ -24,20 +23,18 @@ const Places:FC<placesProps> = (props) => {
         const coords = await getLatLng(results[0]);
         props.setLocation(coords);
         setAddress(address);
-        setMyLocation(false);
     }
 
     const handleLocationClick = () => {
         props.setCurrentLocation();
         setAddress("");
-        setMyLocation(true);
     }
 
     return (
         <div>
-            {!myLocation && <div onClick={handleLocationClick}>
+            <div onClick={handleLocationClick}>
                 Your location
-            </div>}
+            </div>
             <PlacesAutocomplete value={address} onChange={handleChange} onSelect={handleSelect}>
                 {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                 <div>
