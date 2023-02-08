@@ -1,0 +1,33 @@
+import { FC, useEffect, useState } from "react";
+import { ICoords, IWeather } from "../types/appTypes";
+
+const WeatherInfo : FC<ICoords> = (props) => {
+    const [info, setInfo] = useState<IWeather>();
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${props.lat}&lon=${props.lng}&appid=0474a9d3d9bb6baafc7ed5f79aa245f5&units=metric`);
+            const data = await result.json();
+            setInfo(data);
+        }
+
+        fetchData();
+    }, [props])
+
+    return (   
+        <>
+            {info != undefined && <div>
+                <p>{info.name}</p>
+                <p>{info.weather[0].main} - {info.weather[0].description}</p>
+                <p>Temperature: {info.main.temp}°C</p>
+                <p>Feels like: {info.main.feels_like}°C</p>
+                <p>Humidity: {info.main.humidity}</p>
+                <p>Sea Level: {info.main.sea_level}</p>
+                <p>Wind Speed: {info.wind.speed}</p>
+                <p>Visibility: {info.visibility}</p>
+            </div>}
+        </>
+    );
+}
+
+export default WeatherInfo;
