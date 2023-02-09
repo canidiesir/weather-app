@@ -4,7 +4,7 @@
   border-radius: 15px;
   padding: 20px;
   color: white;
-  min-width: 250px;
+  max-width: 270px;
 }
 
 .additional-info .title-container {

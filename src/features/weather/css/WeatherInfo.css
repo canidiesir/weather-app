@@ -1,0 +1,15 @@
+.weather-details {
+  width: 100%;
+}
+
+.additional-infos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0px auto;
+}
+/*# sourceMappingURL=WeatherInfo.css.map */
