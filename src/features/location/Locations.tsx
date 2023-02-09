@@ -15,7 +15,7 @@ const Locations : FC<locationsProps> = (props) => {
     return (
         <div className="locations-container">
             <Button variant="outlined" onClick={props.handleLocationClick} className="current-location">
-                <img src="./src/assets/location.png"></img>
+                <img src="/src/assets/location.png"></img>
                 Use my current location
             </Button>
             
