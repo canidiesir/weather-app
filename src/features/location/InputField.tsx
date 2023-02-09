@@ -1,7 +1,7 @@
-import { TextField } from "@mui/material";
+import { TextField, TextFieldProps } from "@mui/material";
 import { FC } from "react";
 
-const InputField : FC<{getInputProps : Function}> = ({getInputProps}) => {
+const InputField : FC<{getInputProps : () => TextFieldProps}> = ({getInputProps}) => {
 
     return(
         <TextField id="outlined-basic" 
