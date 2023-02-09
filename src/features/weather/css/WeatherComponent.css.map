@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "AAAA,AAAA,gBAAgB,CAAC;EACb,UAAU,EAAE,wBAAwB;EACpC,MAAM,EAAE,GAAG,CAAC,KAAK,CAAC,wBAAwB;EAC1C,aAAa,EAAE,IAAI;EACnB,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,KAAK;EACZ,SAAS,EAAE,KAAK;CAiBnB;;AAvBD,AAQI,gBARY,CAQZ,gBAAgB,CAAC;EACb,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,UAAU;EAC3B,WAAW,EAAE,MAAM;CAKtB;;AAhBL,AAaQ,gBAbQ,CAQZ,gBAAgB,CAKZ,GAAG,CAAC;EACA,YAAY,EAAE,GAAG;CACpB;;AAfT,AAkBI,gBAlBY,CAkBZ,MAAM,CAAC;EACH,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;EAChB,MAAM,EAAE,MAAM;CACjB",
     "sources": [
-        "WeatherComponents.scss"
+        "WeatherComponent.scss"
     ],
     "names": [],
-    "file": "WeatherComponents.css"
+    "file": "WeatherComponent.css"
 }

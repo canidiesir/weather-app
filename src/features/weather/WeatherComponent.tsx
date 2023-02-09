@@ -1,5 +1,5 @@
 import { FC } from "react";
-import './css/WeatherComponents.css'
+import './css/WeatherComponent.css'
 
 interface WeatherComponentProps {
     title: string,
