@@ -12,7 +12,7 @@ const InputField : FC<{getInputProps : () => TextFieldProps}> = ({getInputProps}
             style: {
                 color: "white",
                 borderRadius: 15,
-                width: 500,
+                width: "100%",
             }}} 
         InputLabelProps={{
             style: { 

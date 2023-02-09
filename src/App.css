@@ -2,8 +2,8 @@
   background-image: url(./assets/cloud.png);
   background-repeat: no-repeat;
   background-size: 100% auto;
-  background-position: 0 70px;
-  padding-top: 60px;
+  background-position: 0 45px;
+  padding: 55px 0 30px;
   min-height: 500px;
 }
 

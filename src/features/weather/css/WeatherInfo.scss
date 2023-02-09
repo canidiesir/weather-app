@@ -9,4 +9,10 @@
     width: 100%;
     max-width: 900px;
     margin: 0px auto;
+
+    @media only screen and (max-width: 767px) {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+    }
 }
+

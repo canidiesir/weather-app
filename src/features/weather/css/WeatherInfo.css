@@ -12,4 +12,12 @@
   max-width: 900px;
   margin: 0px auto;
 }
+
+@media only screen and (max-width: 767px) {
+  .additional-infos {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    max-width: 350px;
+  }
+}
 /*# sourceMappingURL=WeatherInfo.css.map */
