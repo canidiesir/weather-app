@@ -1,7 +1,8 @@
 import { FC } from "react";
-import { Button, TextField } from "@mui/material";
+import { Button } from "@mui/material";
 import PlacesAutocomplete from "react-places-autocomplete";
 import './css/Locations.css'
+import InputField from "./InputField";
 
 interface locationsProps {
     address: string,
@@ -21,19 +22,9 @@ const Locations : FC<locationsProps> = (props) => {
             <PlacesAutocomplete value={props.address} onChange={props.handleChange} onSelect={props.handleSelect}>
                 {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                 <div className="input-container">
-                    <TextField id="outlined-basic" label="Search by location" variant="outlined" {...getInputProps()} className="text-field" 
-                    InputProps={{
-                        style: {
-                            color: "white",
-                            borderRadius: 15
-                        }}} 
-                    InputLabelProps={{
-                        style: { 
-                            color: '#fff',
-                    }}}
-                    />
+                    <InputField getInputProps={getInputProps}></InputField>
                     <div className="suggestions">
-                    {loading && <div>...</div>}
+                    {loading && <div className="suggestion">...</div>}
                     {suggestions.map(suggestion => {
                         return (
                         <div {...getSuggestionItemProps(suggestion)} key={suggestion.description} className="suggestion">
