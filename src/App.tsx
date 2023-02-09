@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import './App.css'
-import Places from './components/Places'
-import { useLocation } from './hooks/useLocation'
-import WeatherInfo from './components/WeatherInfo'
+import Places from './features/location/Places'
+import { useLocation } from './features/location/useLocation'
+import WeatherInfo from './features/weather/WeatherInfo';
 
 function App() {
   const {location, setLocation, setCurrentLocation} = useLocation();
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Places setLocation={setLocation} setCurrentLocation={setCurrentLocation}></Places>
-      {location != undefined && <WeatherInfo lat={location.lat} lng={location.lng}></WeatherInfo>}
+      {location != undefined && <WeatherInfo location={location}></WeatherInfo>}
     </div>
   )
 }

@@ -4,7 +4,7 @@ import PlacesAutocomplete, {
     geocodeByAddress,
     getLatLng,
   } from 'react-places-autocomplete';
-import { ICoords } from "../types/appTypes";
+import { ICoords } from "./locationTypes";
 
 interface placesProps {
     setLocation: (coords: ICoords) => void;

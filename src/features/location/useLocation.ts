@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ICoords } from "../types/appTypes"
+import { ICoords } from "./locationTypes"
 
 export const useLocation = () => {
     const [location, setLocationDefault] = useState<ICoords>();
