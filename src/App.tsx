@@ -8,7 +8,7 @@ function App() {
   const {location, setLocation, setCurrentLocation} = useLocation();
   
   useEffect(() => {
-    setCurrentLocation();
+    setCurrentLocation(true);
   }, [])
 
   return (

@@ -10,7 +10,7 @@ export const useLocation = () => {
         }
     }
 
-    const setCurrentLocation = () => {
+    const setCurrentLocation = (firstCall : boolean = false) => {
         navigator.geolocation.getCurrentPosition(function(position) {
             const coords : ICoords = {
                 lat: position.coords.latitude,
@@ -19,7 +19,7 @@ export const useLocation = () => {
     
             setLocation(coords);
         }, function() {
-            alert("Allow location access for this feature")
+            if(!firstCall) alert("Allow location access for this feature")
         });
     }
 
