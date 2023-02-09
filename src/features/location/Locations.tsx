@@ -3,6 +3,7 @@ import { Button } from "@mui/material";
 import PlacesAutocomplete from "react-places-autocomplete";
 import './css/Locations.css'
 import InputField from "./InputField";
+import locationLogo from "/src/assets/location.png";
 
 interface locationsProps {
     address: string,
@@ -15,7 +16,7 @@ const Locations : FC<locationsProps> = (props) => {
     return (
         <div className="locations-container">
             <Button variant="outlined" onClick={props.handleLocationClick} className="current-location">
-                <img src="/src/assets/location.png"></img>
+                <img src={locationLogo}></img>
                 Use my current location
             </Button>
             
