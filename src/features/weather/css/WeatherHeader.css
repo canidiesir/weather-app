@@ -1,0 +1,35 @@
+.main-info {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 30px auto 50px;
+  color: white;
+  font-weight: 600;
+}
+
+.main-info p {
+  margin: 0;
+  text-align: center;
+}
+
+.main-info .location {
+  font-size: 1.6rem;
+}
+
+.main-info .temperature {
+  font-size: 90px;
+}
+
+.main-info .weather-details p {
+  line-height: 1.5;
+  margin: 0;
+}
+
+.main-info .weather-details .weather {
+  font-size: 18px;
+}
+
+.main-info .weather-details .feels-like {
+  color: rgba(255, 255, 255, 0.5);
+}
+/*# sourceMappingURL=WeatherHeader.css.map */

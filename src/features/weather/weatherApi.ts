@@ -10,7 +10,6 @@ export interface IWeatherApi {
         temp: number,
         feels_like: number,
         humidity: number,
-        pressure: number
     },
 
     wind : {
@@ -26,7 +25,6 @@ export interface IWeatherInfo {
     temp: number,
     feels_like: number,
     humidity: number,
-    pressure: number,
     wind_speed: number,
     visibility: number
 }
@@ -35,12 +33,11 @@ export const getWeatherInfo = (weatherApiInfo: IWeatherApi) : IWeatherInfo => {
     const weatherInfo = {
         location : weatherApiInfo.name,
         weather : weatherApiInfo.weather[0].main + " - " + weatherApiInfo.weather[0].description,
-        temp: weatherApiInfo.main.temp,
-        feels_like: weatherApiInfo.main.feels_like,
-        humidity: weatherApiInfo.main.humidity,
-        pressure: weatherApiInfo.main.pressure,
-        wind_speed: weatherApiInfo.wind.speed,
-        visibility: weatherApiInfo.visibility
+        temp: Math.round(weatherApiInfo.main.temp),
+        feels_like: Math.round(weatherApiInfo.main.feels_like),
+        humidity: Math.round(weatherApiInfo.main.humidity),
+        wind_speed: Math.round(weatherApiInfo.wind.speed),
+        visibility: Math.round(weatherApiInfo.visibility)
     }
 
     return weatherInfo;

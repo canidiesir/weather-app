@@ -1,0 +1,64 @@
+.locations-container {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .current-location {
+        background-color: white;
+        margin: 30px 0;
+        padding: 15px 50px;
+        border-radius: 15px;
+        color: #319CE4;
+        font-weight: 500;
+        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+        img {
+            margin-right: 10px;
+        }
+    }
+
+    .current-location:hover {
+        background-color: rgba($color: white, $alpha: 0.7);
+    }
+
+    .current-location:focus{
+        outline: none;
+    }
+
+    .input-container {
+        position: relative;
+
+        .text-field {
+            width: 500px;
+        }
+
+        .suggestions {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.9);
+            width: 100%;
+            border-radius: 15px;
+            color: #026eb6;
+
+            .suggestion {
+                padding: 8px 10px;
+                line-height: 1.2;
+                cursor: pointer;
+                border: 2px solid #026eb6;
+                border-top: 0;
+            }
+
+            .suggestion:first-child {
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+
+            .suggestion:last-child {
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+            }
+        }
+    }
+}

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ICoords } from "../location/locationTypes";
 import { getWeatherInfo, IWeatherInfo } from "./weatherApi";
 
-export const useFetch = (location : ICoords) => {
+export const useWeatherInfo = (location : ICoords) => {
     const [info, setInfo] = useState<IWeatherInfo>();
 
     useEffect(() => {

@@ -1,10 +1,12 @@
 import { FC } from "react";
 import { useState } from 'react';
-import PlacesAutocomplete, {
+import {
     geocodeByAddress,
     getLatLng,
   } from 'react-places-autocomplete';
+import Locations from "./Locations";
 import { ICoords } from "./locationTypes";
+
 
 interface placesProps {
     setLocation: (coords: ICoords) => void;
@@ -31,30 +33,7 @@ const Places:FC<placesProps> = (props) => {
     }
 
     return (
-        <div>
-            <div onClick={handleLocationClick}>
-                Your location
-            </div>
-            <PlacesAutocomplete value={address} onChange={handleChange} onSelect={handleSelect}>
-                {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-                <div>
-                    <input {...getInputProps({
-                        placeholder: "Search by location"
-                    })} />
-                    <div>
-                    {loading && <div>...</div>}
-                    {suggestions.map(suggestion => {
-                        return (
-                        <div {...getSuggestionItemProps(suggestion)} key={suggestion.description}>
-                            <span>{suggestion.description}</span>
-                        </div>
-                        );
-                    })}
-                    </div>
-                </div>
-                )}
-            </PlacesAutocomplete>
-        </div>
+        <Locations address={address} handleChange={handleChange} handleSelect={handleSelect} handleLocationClick={handleLocationClick}></Locations>
     );
 }
 
